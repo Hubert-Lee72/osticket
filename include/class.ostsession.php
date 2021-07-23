@@ -184,8 +184,6 @@ extends SessionBackend {
             ])->one();
             $this->id = $id;
         }
-        $this->data->session_data = "";
-        }
         catch (DoesNotExist $e) {
             $this->data = new SessionData(['session_id' => $id]);
         }
